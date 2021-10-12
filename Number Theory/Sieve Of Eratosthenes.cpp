@@ -8,7 +8,7 @@ int main()
     int n, i, j ;
     int primes[40000], x=1 ;
     cin>>n ;
-    mark[0] =1 ;
+    mark[0] = 1 ;
     mark[1] = 1 ;
     for(i=4; i*i<=mx; i+=2)
         mark[i] = 1 ;
