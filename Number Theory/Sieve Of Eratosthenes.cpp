@@ -2,6 +2,7 @@
 using namespace std ;
 #define mx 40000
 int mark[40000] ;
+
 int main()
 {
     int n, i, j ;
@@ -9,11 +10,14 @@ int main()
     cin>>n ;
     mark[0] =1 ;
     mark[1] = 1 ;
-    for(i=2; i*i<=mx; i++)
+    for(i=4; i*i<=mx; i+=2)
+        mark[i] = 1 ;
+
+    for(i=3; i*i<=mx; i+=2)
     {
         if(mark[i]==0)
         {
-            for(j=i*i; j<=mx; j+=i )
+            for(j=i*i; j<=mx; j+= 2*i )
             {
                 mark[j] = 1 ;
             }
