@@ -84,7 +84,7 @@ void seg_sieve(LL a, LL b)
         if( mark_2[ i-a ]== 0 )
         {
 
-            cout<<i<<NL ;
+            //cout<<i<<NL ;
             cnt++ ;
         }
     }
