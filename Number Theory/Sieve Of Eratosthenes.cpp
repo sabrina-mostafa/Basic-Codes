@@ -1,42 +1,50 @@
+///  ~~~~~Bismillah'hir Rah'manir Rahim~~~~~  ///
+
+/*  "  Allah(SWT) blesses with knowledge whom he wants. "   */
+/*  " Indeed with Hardship, comes Ease. "    */
+
+
 #include<bits/stdc++.h>
 using namespace std ;
-#define mx 40000
-int mark[40000] ;
+
+#define  Fast      ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define ULL       unsigned long long
+#define  LL         long long
+#define  NL        "\n"
+#define ST          string
+#define  F           first
+#define  S           second
+#define  PB        push_back
+#define  MP       make_pair
+#define  pi         acos(-1.0)
+
+/// ---for Unordered map---
+/* mpp.max_load_factor(0.25); mpp.reserve(1024); */
+/* cout << fixed << setprecision(12);*/
+/// ---for Setprecision---
+/* cout<< fixed << showpoint << setprecision(9) << */
+
+int dx4 [ ] = {-1,   0,   0,  +1} ;
+int dy4 [ ] = { 0,  -1,  +1,  0} ;
+int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
+int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
+
+#define mx 200005
+int mark[mx] ;
+vector<int>primes ;
 
 void sieve()
 {
-    int primes[40000] ;
-    int i, j, x=1 ;
-    mark[0] =1 ;
-    mark[1] = 1 ;
+    int i, j ;
+    mark[0] = mark[1] = 1, primes.PB(2) ;
 
-    for(i=2; i*i<=mx; i++)
+    for(i=4; i<=mx; i+=2) mark[i]=1 ;
+    for(i=3; i<=mx; i+=2)
     {
         if(mark[i]==0)
         {
-            for(j=i*i; j<=mx; j+=i )
-            {
-                mark[j] = 1 ;
-            }
-        }
-    }
-#include<bits/stdc++.h>
-using namespace std ;
-#define mx 40000
-int mark[40000] ;
-
-void sieve()
-{
-    int primes[40000] ;
-    int i, j, x=1 ;
-    mark[0] =1 ;
-    mark[1] = 1 ;
-
-    for(i=2; i*i<=mx; i++)
-    {
-        if(mark[i]==0)
-        {
-            for(j=i*i; j<=mx; j+=i )
+            primes.PB(i) ;
+            for(j=i*i; j<=mx; j+=2*i )
             {
                 mark[j] = 1 ;
             }
@@ -44,13 +52,10 @@ void sieve()
     }
 
 /*
-    for(i=0; i<=mx; i++)
-     {
-             if(mark[i]==0) primes[x++]=i ;
-     }
-     for(i=1; i<x; i++)
-             cout<<primes[i]<<" " ;
-             cout<<endl ;
+cout<<"PR ~~~~~\n" ;
+    for(i=0; i<primes.size(); i++)
+        cout<<primes[i]<<" " ;
+    cout<<NL ;
 */
 }
 
@@ -59,29 +64,6 @@ int main()
     int n, i, j ;
     cin>>n ;
     sieve() ;
-
-
-    if(mark[n]==0) cout<<"Prime number " ;
-    else cout<<"Not a prime number " ;
-}
-
-/*
-    for(i=0; i<=mx; i++)
-     {
-             if(mark[i]==0) primes[x++]=i ;
-     }
-     for(i=1; i<x; i++)
-             cout<<primes[i]<<" " ;
-             cout<<endl ;
-*/
-}
-
-int main()
-{
-    int n, i, j ;
-    cin>>n ;
-    sieve() ;
-
 
     if(mark[n]==0) cout<<"Prime number " ;
     else cout<<"Not a prime number " ;
