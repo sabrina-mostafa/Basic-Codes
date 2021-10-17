@@ -30,12 +30,12 @@ int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
 int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
 #define mx 200005
-int mark[mx] ;
+int mark[mx+5] ;
 vector<int>primes ;
 
 void sieve()
 {
-    int i, j ;
+    LL i, j ;
     mark[0] = mark[1] = 1, primes.PB(2) ;
 
     for(i=4; i<=mx; i+=2) mark[i]=1 ;
