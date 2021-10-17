@@ -23,7 +23,7 @@ int dy4 [ ] = { 0,  -1,  +1,  0} ;
 int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
 int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
-#define mx 40005
+#define mx 65540
 int mark[mx+5] ;
 vector<int>primes ;
 
