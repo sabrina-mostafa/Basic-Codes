@@ -29,7 +29,7 @@ int dy4 [ ] = { 0,  -1,  +1,  0} ;
 int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
 int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
-#define mx 40005
+#define mx 2000
 int mark[mx] ;
 vector<int>primes ;
 
@@ -51,51 +51,64 @@ void sieve()
         }
     }
 
-/*cout<<"PR ~~~~~\n" ;
-    for(i=0; i<primes.size(); i++)
-        cout<<primes[i]<<" " ;
-    cout<<NL ; */
+    /*cout<<"PR ~~~~~\n" ;
+        for(i=0; i<primes.size(); i++)
+            cout<<primes[i]<<" " ;
+        cout<<NL ; */
 
 }
 
 void seg_sieve(LL a, LL b)
 {
-
+    LL x ;
     vector<bool> mark_2(b-a+5) ;
-    if(a==1) mark_2[ 0 ] = 1 ;
-
+    //if(a==1) mark_2[ 0 ] = 1 ;
     for(auto p: primes)
     {
         if(p*1LL*p > b) break ;
 
         LL k = a/p ;
         if(a%p!=0) k++ ;
-
-        LL i = k * p ;
-        if(i == p) i += p ;
-
-        for(; i<=b ; i+=p)
+        LL i = k*p ;
+        if(i == p) i+=p ;
+        for( ; i<=b ; i+=p)
             mark_2 [ i-a ] = 1 ;
     }
-
-    int cnt = 0 ;
+    //int cnt = 0 ;
+    //vector<LL>Primes_2 ;
     for(LL i=a; i<=b; i++)
     {
         if( mark_2[ i-a ]== 0 )
         {
-
+            //Primes_2.PB(i) ;
             //cout<<i<<NL ;
-            cnt++ ;
+            //cnt++ ;
+            x = i ;
         }
     }
-    cout<<"Count : "<<cnt<<NL ;
+    //cout<<"Count : "<<cnt<<NL ;
+    cout<<x<<NL ;
+    /*
+      for(int i=0; i<Primes_2.size(); i++)
+            cout<<Primes_2[i]<<" " ;
+            cout<<NL ; */
 }
+
 int main ()
 {
-        LL a, b ;
-        cin>>a>>b ;
+    int t ;
     sieve() ;
-    seg_sieve(a, b) ;
+    cin>>t ;
+    while(t--)
+    {
+        LL a, b ;
+        cin>>b ;
+        if(b>1000)
+            a = b-1000+1 ;   ///bcz it's proved that two consecutive prime numbe's difference is not less than 400(safe=1000)
+        else a = 1 ;
+        seg_sieve(a, b-1) ;
+    }
+
 
     return 0 ;
 }
