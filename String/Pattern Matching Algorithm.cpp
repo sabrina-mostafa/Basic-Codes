@@ -34,10 +34,13 @@ int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 int main ()
 {
     string S, P ;
-    cin>>S>>P ;
+    cout<<"Get the String : " ;
+    cin>>S ;
+    cout<<"Get the Pattern : " ;
+    cin>>P ;
     int LS= S.size(), LP=P.size() ;
 
-    int MAX = LS-LP ;    //maximum i'th index of S(string) that we should compare with the indices of P(pattern) so that comparison doesn't overflow
+    int MAX = LS-LP ;    //maximum i'th index of S that we should compare with the indices of P so that comparison doesn't overflow
     bool flag ;
     for(int i=0; i<=MAX; i++)
     {
