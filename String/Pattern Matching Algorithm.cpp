@@ -54,7 +54,7 @@ int main ()
                     }
             }
             if(flag) {
-                cout<<"Index : "<<i ;
+                cout<<"Found in index number : "<<i ;
                 break ;
             }
     }
