@@ -33,8 +33,8 @@ LL spf[mx+5] ;
 
 void SPF(int n)      ///complexity  >>> Log2(n)
 {
-    for(LL i=1 ; i<=mx; i+=2)   spf[i]=i ;
-    for(LL i=2 ; i<=mx; i+=2)   spf[i]=2 ;
+    for(LL i=1 ; i<=mx; i+=2)   spf[i]=i ;  // initialing every number's SPF with themselves
+    for(LL i=2 ; i<=mx; i+=2)   spf[i]=2 ;  //bcz every even number's SPF is 2
     for(LL i=3; i<=mx; i+=2)
     {
         if(spf[i]==i)
