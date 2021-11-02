@@ -48,7 +48,7 @@ void BFS(int source)   // for unweighted or N weighted Graph to detect the minim
         while( !Q.empty() )
         {
                 int WorkingNode = Q.front() ;   //  will work with the front element of Q
-                Q.pop() ;
+                Q.pop() ;       // when we are done selecting the workingNOde we have to pop it out from the Queue
                 for(int i=0; i<graph[ WorkingNode ].size(); i++)  //  visiting all adjacent nodes of current WorkingNode
                 {
                         int AdjacentNode = graph[ WorkingNode ][i] ;
