@@ -32,7 +32,7 @@ int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
 
 
-int knapsack(int wt[], int val[], int W, int n)      // O(2^n)
+int knapsack(int wt[], int val[], int W, int n)      /// O(2^n)
 {
         //Base Condition
         if(n==0 || W==0)     // think of the smallest valid I/P
