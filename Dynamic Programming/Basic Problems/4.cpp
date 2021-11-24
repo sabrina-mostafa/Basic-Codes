@@ -31,7 +31,7 @@ int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
 int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
 
-///find the length of the Longest Common Subsequence(LCS) of two srings
+///Q : find the length of the Longest Common Subsequence(LCS) of two srings
 
 
 #define mx 1005
