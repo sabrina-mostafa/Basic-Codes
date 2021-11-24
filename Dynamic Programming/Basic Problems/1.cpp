@@ -32,7 +32,7 @@ int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
 
 
-///is it possible to make K with any/some/all of the coins >> Yes or No
+/// Q : is it possible to make K with any/some/all of the coins >> Yes or No ?
 
 
 #define mx 1005
