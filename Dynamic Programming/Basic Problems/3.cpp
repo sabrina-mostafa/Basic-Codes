@@ -31,7 +31,7 @@ int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
 int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
 
-///determine the minimum nmbr of coins(each can be taken multiple times) that will be sum equal to K
+/// Q : determine the minimum number of coins(each can be taken multiple times) that will be sum equal to K
 
 
 #define mx 1005
