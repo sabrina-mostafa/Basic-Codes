@@ -36,8 +36,7 @@ int dp[103][1003] ;
 
 int knapsack(int wt[], int val[], int W, int n)    ///  O(n^2)
 {
-        memset(dp, -1, sizeof(dp)) ;
-
+        
         //Base Condition
         if(n==0 || W==0)        // think of the smallest valid I/P
                 return 0 ;       // max profit = 0 form the I/P
@@ -61,9 +60,10 @@ int main ()
     cin>>W ;
     int wt[n+3], val[n+3] ;
     for(int i=0; i<n; i++)
-    {
-            cin>>wt[i]>>val[i] ;
-    }
+      cin>>wt[i]>>val[i] ;
+        
+    memset(dp, -1, sizeof(dp)) ;  
+        
     int ans = knapsack(wt, val, W, n) ;
     cout<<ans ;
 
