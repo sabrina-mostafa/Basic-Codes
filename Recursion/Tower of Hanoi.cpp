@@ -47,24 +47,26 @@ Otherwise :
 
 */
 
-void TOH(int n, char BEG, char AUX, char END)
+void TOH(int n, char BEG, char AUX, char END, int &cnt)
 {
+    cnt++ ;
     if(n==1)
     {
         cout<<"Move disk no. "<<n<<"    from "<<BEG<<" to "<<END<<endl ;         // if there's only 1 disk on Source then move it directly to Destination
         return ;
     }
-    TOH(n-1, BEG, END, AUX) ;  // .  .  .  .  .  .  . (i)
+    TOH(n-1, BEG, END, AUX, cnt) ;  // .  .  .  .  .  .  . (i)
     cout<<"Move disk no. "<<n<<"    from "<<BEG<<" to "<<END<<endl ;
-    TOH(n-1, AUX, BEG,END) ;  // .  .  .  .  .  . (ii)
+    TOH(n-1, AUX, BEG,END, cnt) ;  // .  .  .  .  .  . (ii)
 }
 
 int main ()
 {
-    int disks, Begin='A', Auxilary='B', End='C' ;
+    int disks, Begin='A', Auxilary='B', End='C', cnt = 0 ;
     cout<<"Number of Disks : " ;
     cin>>disks ;
-    TOH(disks, Begin, Auxilary, End) ;
+    TOH(disks, Begin, Auxilary, End, cnt) ;
+    cout<<"\nNumber of Moves : "<<cnt ;
 
     return 0 ;
 }
