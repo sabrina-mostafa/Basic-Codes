@@ -30,11 +30,14 @@ int dy4 [ ] = { 0,  -1,  +1,  0} ;
 int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
 int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
+
 #define mx 200
 vector<int>graph[mx+3] ;
 bool visited[mx+3] ;   //will mark a node as visited or not
 int dist[mx+3] ;                //store the distance from source to each node
 int parent[mx+3] ;
+
+
 
 void BFS(int source)   // for unweighted or N weighted Graph to detect the minimum distance from Soure to Target
 {
@@ -64,6 +67,7 @@ void BFS(int source)   // for unweighted or N weighted Graph to detect the minim
 }
 
 
+
 int main ()
 {
     int nodes, edges, source ;
@@ -78,7 +82,7 @@ int main ()
     }
     cin>>source ;
 
-    BFS(source) ;
+    BFS(source) ;       //for BFS Queue data structure is used
 
     cout<<"From Source Node "<<source<<NL ;
     for(int i=1; i<=nodes; i++)
