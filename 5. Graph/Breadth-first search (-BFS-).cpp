@@ -37,33 +37,33 @@ int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
 #define mx 200
 vector<int>graph[mx+3] ;
-bool visited[mx+3] ;   //will mark a node as visited or not
-int dist[mx+3] ;                //store the distance from source to each node
-int parent[mx+3] ;
+bool visited[mx+3] ;               //will mark a node as visited or not
+int dist[mx+3] ;                          //store the distance from source to each node
+int parent[mx+3] ;      
 
 
 
-void BFS(int source)   // for unweighted or N weighted Graph to detect the minimum distance from Soure to Target
+void BFS(int source)             // for unweighted or N weighted Graph to detect the minimum distance from Soure to Target
 {
         queue<int> Q ;
         //   initialization
         Q.push(source) ;
-        visited[source] = 1 ;   //  as pushed in Queue, so it's visited
-        dist[source] = 0 ;   //  source's level or distance is always 0
+        visited[source] = 1 ;             //  as pushed in Queue, so it's visited
+        dist[source] = 0 ;                       //  source's level or distance is always 0
         parent[source] = source ;
 
         while( !Q.empty() )
         {
-                int WorkingNode = Q.front() ;   //  will work with the front element of Q
-                Q.pop() ;       // when we are done selecting the workingNOde we have to pop it out from the Queue
-                for(int i=0; i<graph[ WorkingNode ].size(); i++)  //  visiting all adjacent nodes of current WorkingNode
+                int WorkingNode = Q.front() ;                            //  will work with the front element of Q
+                Q.pop() ;                                                   // when we are done selecting the workingNOde we have to pop it out from the Queue
+                for(int i=0; i<graph[ WorkingNode ].size(); i++)                //  visiting all adjacent nodes of current WorkingNode
                 {
                         int AdjacentNode = graph[ WorkingNode ][i] ;
-                        if( visited[ AdjacentNode ] == 0)    //  iff it's not visited
+                        if( visited[ AdjacentNode ] == 0)                //  iff it's not visited
                         {
                                 Q.push( AdjacentNode ) ;
-                                visited[ AdjacentNode ] = 1 ;   //  as pushed in Queue, so it's visited
-                                dist[ AdjacentNode ] = dist[ WorkingNode ] + 1 ;  // for unweighted>>(+=1) and for N weighted>>(+=N)
+                                visited[ AdjacentNode ] = 1 ;                      //  as pushed in Queue, so it's visited
+                                dist[ AdjacentNode ] = dist[ WorkingNode ] + 1 ;        // for unweighted>>(+=1) and for N weighted>>(+=N)
                                 parent[AdjacentNode ] = WorkingNode ;
                         }
                 }
@@ -75,18 +75,18 @@ void BFS(int source)   // for unweighted or N weighted Graph to detect the minim
 int main ()
 {
     int nodes, edges, source ;
-    cin>>nodes>>edges ;   //  number of nodes and edges
+    cin>>nodes>>edges ;                  //  number of nodes and edges
 
     for(int i=1; i<=edges ; i++)
     {
-            int u, v ;    //  nodes of each edges
+            int u, v ;                   //  nodes of each edges
             cin>>u>>v ;
-            graph[u].PB(v) ;   //  as they are adjacent to each other
-            graph[v].PB(u) ;   //  as they are adjacent to each other
+            graph[u].PB(v) ;              //  as they are adjacent to each other
+            graph[v].PB(u) ;          //  as they are adjacent to each other
     }
     cin>>source ;
 
-    BFS(source) ;       //for BFS Queue data structure is used
+    BFS(source) ;          //for BFS Queue data structure is used
 
     cout<<"From Source Node "<<source<<NL ;
     for(int i=1; i<=nodes; i++)
