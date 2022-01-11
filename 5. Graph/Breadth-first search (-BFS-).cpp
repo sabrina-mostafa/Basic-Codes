@@ -31,6 +31,10 @@ int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
 int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
 
+///~~~~~~~~~~~~~~~~~~~ SSSP( Single Source Shortest Path ) ~~~~~~~~~~~~~~~~~~~~
+
+
+
 #define mx 200
 vector<int>graph[mx+3] ;
 bool visited[mx+3] ;   //will mark a node as visited or not
