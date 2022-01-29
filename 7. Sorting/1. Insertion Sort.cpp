@@ -36,23 +36,34 @@ int main ()     //O(n^2)
     int n, i, j ;
     cout<<"enter number of elements : " ;
     cin>>n ;
+
     int arr[n+5] ;
+    cout<<"enter "<<n<<" numbers : " ;
+    
     for(i=0; i<n; i++)
         cin>>arr[i] ;
 
         /// will devide the arr in 2 parts I. Sorted array II. Unsorted arry
-           //  will INSERT the 1st element of Unsorted arr to the Sorted arr on its right(worth) position
+           //  will INSERT the 1st element(one by one) of Unsorted arr to the Sorted arr on its appropriate position
 
 
-    for(i=1; i<n; i++)        //  for Unsorted array
+    for(i=1; i<n; i++)        //  1st element(0th) is sorted alone. So rest(1th to (n-1)th ) are in unsorted list
     {
-        int temp = arr[i] ;            //  taking the 1st element from the Unsorted arr to INSERT it on its right pos in the Sorted arr
-        for(j=i-1; arr[j]>temp && j>=0; j--)
+        int key = arr[i] ;            //  taking the 1st element from the Unsorted arr to INSERT it on its appropriate position in the Sorted arr
+        j = i-1 ;
+
+
+         while( j>=0 && key<arr[j] )        //  will place the KEY in appropriate place in the sorted list
         {
-            arr[j+1] = arr[j] ;         //  right shifting while the elements are bigger than temp
+            arr[j+1] = arr[j] ;         //  comparing the KEY with the elements of sorted list and right shifting while the elements are bigger than key
+             j-- ;
         }
-        arr[j+1] = temp ;       //  INSERTING temp on its right pos
+
+
+        j++ ;
+        arr[j] = key ;       //  INSERTING temp on its appropriate position
     }
+
     for(i=0; i<n; i++)
         cout<<arr[i]<<" " ;
 
