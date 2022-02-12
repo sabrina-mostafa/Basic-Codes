@@ -20,19 +20,19 @@ using namespace std ;
 #define    _           " "
 
 
-///determining the summation of a range in a given Array for given query times
+///determining the summation of a range in a Array for query times
 
 int main ()
 {
     int n, query, left, right , ans, i ;
     cin>>n ;
-    int a[n+3], b[n+3] ;
+    int a[n+3], Pre_Sum[n+3] ;
 
-    b[0] = 0 ;
+    Pre_Sum[0] = 0 ;
     for(i=1; i<=n; i++)
     {
         cin>>a[i] ;
-        b[i] = b[i-1] + a[i] ;
+        Pre_Sum[i] = Pre_Sum[i-1] + a[i] ;
     }
 
 
@@ -40,7 +40,7 @@ int main ()
     for(i=1; i<=query; i++)
     {
         cin>>left>>right ;
-        ans = b[right] - b[left-1] ;
+        ans = Pre_Sum[right] - Pre_Sum[left-1] ;
         cout<<ans<<endl ;
     }
 
