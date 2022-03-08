@@ -30,7 +30,7 @@ Worts Case : O(n^2)
 
 
 
-int main ()     //O(n^2)
+int main ()
 {
     int n, i, j ;
     cout<<"enter number of elements : " ;
