@@ -19,16 +19,15 @@ using namespace std ;
 #define   NL       "\n"
 #define    _           " "
 
-/// ---for Unordered map---
-/* mpp.max_load_factor(0.25); mpp.reserve(1024); */
-/* cout << fixed << setprecision(12);*/
-/// ---for Setprecision---
-/* cout<< fixed << showpoint << setprecision(9) << */
 
-int dx4 [ ] = {-1,   0,   0,  +1} ;
-int dy4 [ ] = { 0,  -1,  +1,  0} ;
-int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
-int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
+/*
+
+Complexity :
+Best Case : O(n) >> outer loop = 2 to n times && inner loop = 1 time
+Worst Case : O(n^2)
+
+*/
+
 
 
 int main ()     //O(n^2)
