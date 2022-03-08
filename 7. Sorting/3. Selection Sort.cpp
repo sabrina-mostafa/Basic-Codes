@@ -35,9 +35,12 @@ int main ()
     int n, i, j ;
     cout<<"enter number of elements : " ;
     cin>>n ;
+    
     int arr[n+5] ;
+    
     for(i=0; i<n; i++)
     cin>>arr[i] ;
+    
 
     for(i=0; i<n-1; i++)        //  number of passes will be 1 less than the element number
     {
@@ -50,7 +53,10 @@ int main ()
         if(arr[PosMin]<arr[x])
             swap(arr[PosMin], arr[x]) ;         //  the min value will get it's accurate position
     }
+    
+    
     cout<<"Sorted Array :\n" ;
+    
     for(i=0; i<n; i++)
     cout<<arr[i]<<" " ;
 
