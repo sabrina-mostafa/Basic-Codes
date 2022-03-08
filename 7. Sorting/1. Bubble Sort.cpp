@@ -26,6 +26,7 @@ Complexity :
 Best Case : O(n)  >> only one pass >> outer loop=1 && inner loop=n-1 times
 Worst Case : O(n^2)
 
+After each pass the next largest number Bubbles Up in it's appropiate position
 
 */
 
