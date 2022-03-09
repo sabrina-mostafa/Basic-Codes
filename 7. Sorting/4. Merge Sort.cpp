@@ -21,6 +21,16 @@ using namespace std ;
 
 
 
+/*
+
+Complexity :
+Best Case : n Log(n)
+Worst Case : n Log(n)
+
+*/
+
+
+
 void Merge(int a[], int LB, int mid, int UB)
 {
     int i=LB, j=mid+1, k=LB, b[UB+5] ;
