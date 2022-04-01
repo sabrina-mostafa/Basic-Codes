@@ -26,6 +26,8 @@ Complexity :
 Best Case : O(n^2)
 Worts Case : O(n^2)
 
+Build up a sorted list by selecting the minimum element from the unsorted list and place it at the 1st position of the unsorted list
+
 */
 
 
