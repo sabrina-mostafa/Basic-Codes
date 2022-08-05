@@ -35,9 +35,9 @@ int main ()
     vector <int> v = {1, 3, 3, 3, 4, 5, 6, 6, 8, 9, 12} ;
     bool ans = binary_search(v.begin(), v.end(), 88) ;
     cout<<ans<<endl  ;
-    int LB = lower_bound(v.begin(), v.end(), 6)- v.begin() ;  ///wil return the 1st index that is >= 6
+    int LB = lower_bound(v.begin(), v.end(), 6)- v.begin() ;  ///wil return the 1st index that is (gtr.eq.)>= 6
     cout<<LB<<endl ;
-    int UP = upper_bound(v.begin(), v.end(), 6) - v.begin() ;  ///will return the 1st index that is > 8
+    int UP = upper_bound(v.begin(), v.end(), 6) - v.begin() ;  ///will return the 1st index that is (gtr)> 6
     cout<<UP<<endl ;
     return 0 ;
 }
