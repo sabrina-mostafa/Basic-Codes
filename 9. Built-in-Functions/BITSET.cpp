@@ -33,10 +33,16 @@ int main ()
     int num, x ;
     string s="1101" ;
     bitset<8>bi(s) ;
+    
     cout<<"Binary representation of S in the given size = "<<bi<<endl ;
-    cout<<"Last digit = "<<bi[0]<<endl ;        // indexing will be in reverse order
+    cout<<"Last digit = "<<bi[0]<<endl ;          // indexing will be in reverse order
+    
+    x = bi.to_ulong() ;     //  Converts Binary to Decimal
+    cout<<"Binary to Decimal : "<<x<<endl ;
 
 
+    
+    
     bitset<8>b ;
 
     cout<<"\nGet a number : " ;
