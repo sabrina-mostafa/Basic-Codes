@@ -27,6 +27,13 @@ using namespace std ;
 #define    _                    " "
 
 
+/*
+
+Limitation or bitmasking or bitset is -
+we can work with them for 64 bits or not more than 64 elements
+
+*/
+
 
 int main ()
 {
