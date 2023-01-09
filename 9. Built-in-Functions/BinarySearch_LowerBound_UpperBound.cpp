@@ -39,5 +39,15 @@ int main ()
     cout<<LB<<endl ;
     int UP = upper_bound(v.begin(), v.end(), 6) - v.begin() ;  ///will return the 1st index that is (gtr)> 6
     cout<<UP<<endl ;
+    
+    /*
+    for Set >>
+    auto it = st.lower_bound(a[i]); 
+    or 
+    auto it = st.lower_bound(value);
+        //  Returns the immediate lower value of a[i] 
+    */
+    
+    
     return 0 ;
 }
