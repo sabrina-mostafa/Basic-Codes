@@ -48,6 +48,7 @@ int main ()
         //  Returns the ADDRESS of immediate lower value of a[i] 
             so the value = *it
      prev(it) returns the previous address of *it
+     prev(it) works same as like it--
     */
     
     
