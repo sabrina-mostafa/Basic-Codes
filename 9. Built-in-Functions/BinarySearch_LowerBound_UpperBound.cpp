@@ -45,7 +45,9 @@ int main ()
     auto it = st.lower_bound(a[i]); 
     or 
     auto it = st.lower_bound(value);
-        //  Returns the immediate lower value of a[i] 
+        //  Returns the ADDRESS of immediate lower value of a[i] 
+            so the value = *it
+     prev(it) returns the previous address of *it
     */
     
     
