@@ -23,7 +23,7 @@ using namespace std ;
 
 NOTES :
 
-Number ta sorted array/vector e place por(jodi na thake) 
+Number ta sorted array/vector e place korar por(jodi container e already na thake) 
 lower bound = oi number ta shoho er choto joto gula number ache er shb index er last index pabo
                                                     or
               last joto index porjnto oi number ta thkte parbe (after orting)
