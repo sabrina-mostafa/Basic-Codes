@@ -28,6 +28,8 @@ lower bound = oi number ta shoho er choto joto gula number ache er shb index er 
               last joto index porjnto oi number ta thkte parbe (after orting)
 
 upper bound = oi number tar chaite boro number jei index theke strt hbe
+              (SAFER to USE in Problems. number ta exit kore ki kore na oi jhamela nai)
+
 
 */
 
