@@ -17,16 +17,22 @@ using namespace std ;
 #define  MP       make_pair
 #define  pi         acos(-1.0)
 
-/// ---for Unordered map---
-/* mpp.max_load_factor(0.25); mpp.reserve(1024); */
-/* cout << fixed << setprecision(12);*/
-/// ---for Setprecision---
-/* cout<< fixed << showpoint << setprecision(9) << */
 
-int dx4 [ ] = {-1,   0,   0,  +1} ;
-int dy4 [ ] = { 0,  -1,  +1,  0} ;
-int dx [ ] = {-1,  -1,  -1,   0,   0,  +1,  +1,  +1} ;
-int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
+
+/*
+
+NOTES :
+
+lower bound = oi number ta shoho er choto joto gula number ache er shb index er last index pabo
+                                                    or
+              last joto index porjnto oi number ta thkte parbe (after orting)
+
+upper bound = oi number tar chaite boro number jei index theke strt hbe
+
+*/
+
+
+
 
 
 int main ()
