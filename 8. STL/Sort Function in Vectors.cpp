@@ -55,7 +55,7 @@ int main ()
   
     for(int i=0; i<n; i++)
         cin>>v[i] ;
-    sort(v.begin(), v.end(), greater<int>() ) ;
+    sort(v.begin(), v.end(), greater<int>() ) ;  //  ANOTHER WAY ::  sort(v.rbegin(), v.rend());
     for(int i=0; i<n; i++)
         cout<<v[i]<<_ ;
     cout<<NL ;
