@@ -33,8 +33,9 @@ LL spf[mx+5] ;
 
 void SPF(int n)      ///complexity  >>> Log2(n)
 {
-    for(LL i=1 ; i<=mx; i+=2)   spf[i]=i ;  // initialing every number's SPF with themselves
+    for(LL i=1 ; i<=mx; i+=2)   spf[i]=i ;  // initialing every odd number's SPF with themselves
     for(LL i=2 ; i<=mx; i+=2)   spf[i]=2 ;  //bcz every even number's SPF is 2
+    
     for(LL i=3; i<=mx; i+=2)
     {
         if(spf[i]==i)
@@ -48,17 +49,19 @@ void SPF(int n)      ///complexity  >>> Log2(n)
     int cnt = 0 ;
     while(spf[n]>1)
     {
-            cnt++ ;
-            if(cnt>1) cout<<" * " ;
+        cnt++ ;
+        if(cnt>1) cout<<" * " ;
         cout<<spf[n]  ;
 
         n/= spf[n] ;
     }
 }
+
+
 int main ()
 {
-        int n ;
-        cin>>n ;   ///here n should be integer (!long long)
+    int n ;
+    cin>>n ;   ///here n should be integer (!long long)
     SPF(n) ;
     return 0 ;
 }
