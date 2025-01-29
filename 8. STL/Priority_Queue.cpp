@@ -67,11 +67,20 @@ int main ()
 
         while(!pq.empty())
         {
-                cout<<pq.top()<<" " ;
+                cout<<pq.top()<<endl ;
                 pq.pop() ;
         }
         cout<<endl<<"----------"<<endl ;
+/*
+OUTPUT: 
+        4
+        3
+        2
+        1
+*/
 
+
+        
         priority_queue<int, vector<int>, greater<int>> pqq ;        // min_heap (increasing order)
         pqq.push(1) ;
         pqq.push(2) ;
@@ -84,8 +93,13 @@ int main ()
                 pqq.pop() ;
         }
         cout<<endl ;
-
-
+/*
+OUTPUT: 
+        1
+        2
+        3
+        4
+*/
 
     return 0 ;
 }
