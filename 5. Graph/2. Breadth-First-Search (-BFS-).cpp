@@ -36,7 +36,7 @@ int dy [ ] = {-1,   0,  +1,  -1,  +1,  -1,   0,  +1} ;
 
 
 #define mx 200
-vector<int>graph[mx+3] ;
+vector<int>graph[mx+3] ;    // adjacancy matrix
 bool visited[mx+3] ;               //will mark a node as visited or not
 int dist[mx+3] ;                          //store the distance from source to each node
 int parent[mx+3] ;      
